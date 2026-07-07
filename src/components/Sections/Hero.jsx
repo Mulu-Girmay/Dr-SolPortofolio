@@ -1,5 +1,5 @@
-import Button from "../../common/Button";
-import Container from "../../common/Container";
+import Button from "../common/Button";
+import Container from "../common/Container";
 
 const Hero = () => (
   <section id="home" className="bg-white overflow-hidden">

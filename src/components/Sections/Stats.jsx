@@ -1,4 +1,4 @@
-import Container from "../../common/Container";
+import Container from "../common/Container";
 
 const stats = [
   { icon: "👥", label: "Successful Patients", value: "1,200+", desc: "Patients cared for and continuously supported" },

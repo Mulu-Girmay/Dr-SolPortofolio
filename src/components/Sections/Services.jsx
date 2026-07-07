@@ -1,6 +1,6 @@
-import Card from "../../common/Card";
-import Container from "../../common/Container";
-import SectionTitle from "../../common/SectionTitle";
+import Card from "../common/Card";
+import Container from "../common/Container";
+import SectionTitle from "../common/SectionTitle";
 
 const services = [
   { icon: "🫀", title: "Chronic Disease Management", desc: "Expert care for diabetes, hypertension, asthma, and other chronic conditions." },

@@ -1,5 +1,5 @@
-import Button from "../../common/Button";
-import Container from "../../common/Container";
+import Button from "../common/Button";
+import Container from "../common/Container";
 
 const CTA = () => (
   <section className="bg-[#1E3A5F] py-16 overflow-hidden">

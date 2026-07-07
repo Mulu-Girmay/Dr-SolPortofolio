@@ -1,6 +1,6 @@
-import Button from "../../common/Button";
-import Container from "../../common/Container";
-import SectionTitle from "../../common/SectionTitle";
+import Button from "../common/Button";
+import Container from "../common/Container";
+import SectionTitle from "../common/SectionTitle";
 
 const About = () => (
   <section id="about" className="py-20 bg-white">
