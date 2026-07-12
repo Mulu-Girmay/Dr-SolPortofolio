@@ -14,7 +14,7 @@ export default function CTASection() {
               src={doctorImage}
               alt="Doctor"
               priority
-              className="relative z-30 object-contain max-h-[500px] md:max-h-[600px] w-auto"
+              className="relative z-30 object-contain max-h-[400px] md:max-h-[400px] w-auto"
             />
           </div>
         </div>
