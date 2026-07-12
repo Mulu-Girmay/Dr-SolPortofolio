@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import doctorImage from "@/assets/images/sol1.png";
 
 export default function CTASection() {
@@ -34,8 +35,11 @@ export default function CTASection() {
             <Button
               variant="ghost"
               className="w-fit bg-white text-[#003d7a] hover:bg-gray-100 px-6 py-2.5 text-sm rounded-md font-medium mx-auto"
+              asChild
             >
-              Book a Consultation <ArrowRight className="w-4 h-4 ml-2" />
+              <Link href="#contact">
+                Book a Consultation <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </Button>
           </div>
         </div>

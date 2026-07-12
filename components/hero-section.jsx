@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import doctorImage from "@/assets/images/sol1.png";
 
 export default function HeroSection() {
@@ -39,9 +40,12 @@ export default function HeroSection() {
 
               <Button
                 className="mt-5 rounded-full bg-[#1f2b6c] hover:bg-[#16204d] px-7 h-11"
+                asChild
               >
-                Learn More
-                <ArrowRight className="ml-2 w-4 h-4"/>
+                <Link href="#contact">
+                  Book Appointment
+                  <ArrowRight className="ml-2 w-4 h-4"/>
+                </Link>
               </Button>
 
             </div>

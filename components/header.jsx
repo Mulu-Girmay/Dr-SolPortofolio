@@ -55,7 +55,7 @@ export default function Header() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="text-[20px] font-medium text-gray-600 hover:text-[#1f2b6c] transition-colors"
+                className="text-sm font-medium text-gray-600 hover:text-[#1f2b6c] transition-colors"
               >
                 {item.title}
               </Link>
@@ -65,8 +65,8 @@ export default function Header() {
           {/* Appointment */}
 
           <div className="hidden md:block">
-            <Button className="h-11 rounded-full px-7 bg-[#1f2b6c] hover:bg-[#16204d] text-sm font-medium">
-             Book  Appointment
+            <Button asChild className="h-11 rounded-full px-7 bg-[#1f2b6c] hover:bg-[#16204d] text-sm font-medium">
+              <Link href="#contact">Book Appointment</Link>
             </Button>
           </div>
 
@@ -101,8 +101,8 @@ export default function Header() {
               </Link>
             ))}
 
-            <Button className="w-full rounded-full bg-[#1f2b6c]">
-              Appointment
+            <Button className="w-full rounded-full bg-[#1f2b6c]" asChild>
+              <Link href="#contact" onClick={() => setOpen(false)}>Book Appointment</Link>
             </Button>
           </div>
         </div>
