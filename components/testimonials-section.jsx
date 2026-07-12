@@ -40,7 +40,7 @@ export default function TestimonialsSection() {
               Testimonials
             </p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
-              What Patients Say
+              What Patients  about Dr.Solomon
             </h2>
           </div>
 

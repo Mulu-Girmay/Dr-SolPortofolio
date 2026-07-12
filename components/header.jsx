@@ -58,7 +58,7 @@ export default function Header() {
 
           <div className="hidden md:block">
             <Button className="h-10 rounded-full px-7 bg-[#1f2b6c] hover:bg-[#16204d] text-sm font-medium">
-              Appointment
+             Book  Appointment
             </Button>
           </div>
 
