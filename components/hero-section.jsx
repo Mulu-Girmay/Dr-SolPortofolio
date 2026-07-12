@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="bg-white pt-2 pb-4 md:pt-3 md:pb-6 relative overflow-hidden"
+      className="bg-white py-8 md:py-10 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4">
 
@@ -52,7 +52,7 @@ export default function HeroSection() {
 
               {/* background circle */}
 
-              <div className="absolute w-[420px] h-[420px] rounded-full bg-[#f3f4f7]" />
+              {/* <div className="absolute w-[420px] h-[420px] rounded-full bg-[#f3f4f7]" /> */}
 
               <Image
                 src={doctorImage}
@@ -65,13 +65,13 @@ export default function HeroSection() {
 
             {/* RIGHT */}
 
-            <div className="relative flex justify-end">
+            <div className="relative flex justify-end pb-0 sm:pb-8 lg:pb-0">
 
               <div className="max-w-[250px]">
 
-                <div className="w-8 h-[2px] bg-[#1f2b6c] mb-8"/>
+                <div className="w-6 sm:w-8 h-[2px] bg-[#1f2b6c] mb-6"/>
 
-                <p className="text-gray-500 leading-8 text-sm">
+                <p className="text-gray-500 leading-6 text-sm">
                   Providing compassionate healthcare focused on
                   prevention, wellness and long-term relationships.
                   Every patient receives individualized care tailored
@@ -88,7 +88,8 @@ export default function HeroSection() {
 
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-[110px] w-full">
+      {/* Bottom Decoration - Full Width (absolute positioned outside container) */}
+      <div className="absolute bottom-0 left-0 right-0 h-[50px] sm:h-[80px] lg:h-[110px] w-full">
         <div className="absolute inset-0 bg-[#1f2b6c]" />
       </div>
 
