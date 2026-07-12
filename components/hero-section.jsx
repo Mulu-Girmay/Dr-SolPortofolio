@@ -17,11 +17,11 @@ export default function HeroSection() {
 
           {/* Hero */}
 
-          <div className="grid lg:grid-cols-[1fr_1.2fr_0.8fr] items-center px-10 lg:px-16 pt-14 pb-10">
+          <div className="grid lg:grid-cols-[1fr_1.2fr_0.8fr] items-end px-10 lg:px-16 pt-14 pb-0">
 
             {/* LEFT */}
 
-            <div className="relative z-20">
+            <div className="relative z-20 pb-10">
 
               <p className="uppercase tracking-[5px] text-[11px] text-gray-500 font-medium">
                 FAMILY DOCTOR
@@ -46,13 +46,13 @@ export default function HeroSection() {
 
             </div>
 
-            {/* CENTER */}
+            {/* CENTER - Image with increased overlap */}
 
-            <div className="relative flex justify-center items-end">
+            <div className="relative flex justify-center items-end z-30 pb-0 mb-[-140px]">
 
               {/* background circle */}
 
-              <div className="absolute w-[420px] h-[420px] rounded-full bg-[#f3f4f7]" />
+              <div className="absolute w-[420px] h-[420px] rounded-full bg-[#f3f4f7] bottom-32" />
 
               <Image
                 src={doctorImage}
@@ -65,7 +65,7 @@ export default function HeroSection() {
 
             {/* RIGHT */}
 
-            <div className="relative flex justify-end">
+            <div className="relative flex justify-end z-20 pb-10">
 
               <div className="max-w-[250px]">
 
@@ -89,7 +89,7 @@ export default function HeroSection() {
       </div>
 
       {/* Bottom Decoration - Full Width (absolute positioned outside container) */}
-      <div className="absolute bottom-0 left-0 right-0 h-[110px] w-full">
+      <div className="absolute bottom-0 left-0 right-0 h-[170px] w-full z-10">
         <div className="absolute inset-0 bg-[#1f2b6c]" />
       </div>
 

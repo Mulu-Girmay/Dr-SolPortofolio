@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header className="relative z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="h-20 flex items-center justify-between">
+        <div className="h-24 flex items-center justify-between">
           {/* Logo */}
 
           <Link
