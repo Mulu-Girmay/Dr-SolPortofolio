@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="bg-white py-8 md:py-10 relative overflow-hidden"
+      className="bg-white pt-2 md:pt-3 pb-8 md:pb-10 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4">
 
@@ -58,6 +58,7 @@ export default function HeroSection() {
                 src={doctorImage}
                 alt="Doctor"
                 priority
+                loading="eager"
                 className="relative z-30 object-contain max-h-[700px] w-auto"
               />
 
