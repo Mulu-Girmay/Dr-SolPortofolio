@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="bg-white py-12 md:py-16 relative overflow-hidden"
+      className="bg-white pt-2 pb-4 md:pt-3 md:pb-6 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4">
 
@@ -88,7 +88,6 @@ export default function HeroSection() {
 
       </div>
 
-      {/* Bottom Decoration - Full Width (absolute positioned outside container) */}
       <div className="absolute bottom-0 left-0 right-0 h-[110px] w-full">
         <div className="absolute inset-0 bg-[#1f2b6c]" />
       </div>

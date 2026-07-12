@@ -7,7 +7,7 @@ import {
   HeartHandshake,
 } from "lucide-react";
 
-import aboutImage from "@/assets/images/sol2.jpg";
+import aboutImage from "@/assets/images/sol2.png";
 
 export default function AboutSection() {
   return (
@@ -31,7 +31,7 @@ export default function AboutSection() {
                 <Image
                   src={aboutImage}
                   alt="Dr Solomon"
-                  className="w-full h-[600px] object-cover"
+                  className="w-full h-[600px] object-contain"
                 />
 
               </div>
