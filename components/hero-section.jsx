@@ -40,7 +40,7 @@ export default function HeroSection() {
 
               <Button
                 className="mt-5 rounded-full bg-[#1f2b6c] hover:bg-[#16204d] px-7 h-11"
-                asChild
+                
               >
                 <Link href="#contact">
                   Book Appointment
