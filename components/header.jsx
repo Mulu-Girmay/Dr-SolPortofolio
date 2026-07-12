@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoImage from "@/assets/images/sol1.png";
 
 const navLinks = [
   { title: "Home", href: "#home" },
@@ -25,8 +27,14 @@ export default function Header() {
             href="/"
             className="flex items-center gap-3 flex-shrink-0"
           >
-            <div className="w-10 h-10 rounded-full bg-[#1f2b6c] flex items-center justify-center">
-              <span className="text-white font-semibold text-lg">+</span>
+            <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
+              <Image
+                src={logoImage}
+                alt="Dr. Solomon Logo"
+                width={48}
+                height={48}
+                className="w-full h-full object-cover"
+              />
             </div>
 
             <div>

@@ -5,21 +5,21 @@ import { useState } from 'react'
 
 const testimonials = [
   {
-    name: 'Sarah Mitchell',
+    name: 'Sarah Kebede',
     role: 'Patient since 2020',
     rating: 5,
     text: "Dr. Solomon is exceptional! He takes the time to listen and truly understands my health concerns.",
     avatar: 'SM',
   },
   {
-    name: 'James Rodriguez',
+    name: 'Belachew Besme',
     role: 'Patient since 2019',
     rating: 5,
     text: 'Professional, compassionate, and thorough. Dr. Solomon helped me manage my diabetes effectively.',
     avatar: 'JR',
   },
   {
-    name: 'Emily Chen',
+    name: 'Melat Gebeyoh',
     role: 'Patient since 2021',
     rating: 5,
     text: "Finding Dr. Solomon was a blessing. He's helping me achieve overall wellness with a holistic approach.",
