@@ -60,7 +60,7 @@ export default function AboutSection() {
                 ABOUT ME
               </p>
 
-              <h2 className="mt-3 sm:mt-4 text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+              <h2 className="mt-3 sm:mt-4 text-2xs sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
                 Compassionate Care
                 <br />
                 Built on Trust
