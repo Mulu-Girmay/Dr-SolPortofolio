@@ -1,165 +1,96 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { Star } from 'lucide-react'
+import { useState } from 'react'
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    role: "Patient since 2020",
-    image: "SM",
+    name: 'Sarah Mitchell',
+    role: 'Patient since 2020',
     rating: 5,
-    text: "Dr. Solomon completely changed how I think about healthcare. Every visit feels personal, professional, and reassuring. He explains everything clearly and genuinely cares about his patients.",
+    text: "Dr. Solomon is exceptional! He takes the time to listen and truly understands my health concerns.",
+    avatar: 'SM',
   },
   {
-    name: "James Rodriguez",
-    role: "Patient since 2019",
-    image: "JR",
+    name: 'James Rodriguez',
+    role: 'Patient since 2019',
     rating: 5,
-    text: "The level of care is exceptional. I finally found a physician who listens carefully and creates a treatment plan that actually works.",
+    text: 'Professional, compassionate, and thorough. Dr. Solomon helped me manage my diabetes effectively.',
+    avatar: 'JR',
   },
   {
-    name: "Emily Chen",
-    role: "Patient since 2021",
-    image: "EC",
+    name: 'Emily Chen',
+    role: 'Patient since 2021',
     rating: 5,
-    text: "Friendly, knowledgeable, and compassionate. Every appointment has been a wonderful experience.",
+    text: "Finding Dr. Solomon was a blessing. He's helping me achieve overall wellness with a holistic approach.",
+    avatar: 'EC',
   },
-];
+]
 
 export default function TestimonialsSection() {
-  const [active, setActive] = useState(0);
-
-  const next = () =>
-    setActive((active + 1) % testimonials.length);
-
-  const prev = () =>
-    setActive(
-      active === 0
-        ? testimonials.length - 1
-        : active - 1
-    );
+  const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <section className="bg-[#f5f6fa] py-20">
-      <div className="max-w-7xl mx-auto px-4">
-
-        <div className="bg-white border border-gray-200">
-
-          <div className="px-10 lg:px-16 py-16">
-
-            {/* Heading */}
-
-            <div className="text-center max-w-2xl mx-auto">
-
-              <p className="uppercase tracking-[5px] text-xs font-semibold text-[#1f2b6c]">
-                TESTIMONIALS
-              </p>
-
-              <h2 className="mt-4 text-5xl font-bold text-gray-900">
-                What Patients Say
-              </h2>
-
-              <div className="w-20 h-[2px] bg-[#1f2b6c] mx-auto mt-6" />
-
-            </div>
-
-            {/* Featured Card */}
-
-            <div className="mt-16 bg-[#fafafa] rounded-3xl p-12 relative">
-
-              <Quote
-                className="absolute top-10 left-10 w-16 h-16 text-[#1f2b6c]/10"
-              />
-
-              <div className="flex items-center gap-1 mb-8">
-
-                {[...Array(testimonials[active].rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-
-              </div>
-
-              <p className="text-2xl leading-10 text-gray-700 max-w-4xl">
-                "{testimonials[active].text}"
-              </p>
-
-              <div className="mt-10 flex items-center justify-between">
-
-                <div className="flex items-center gap-4">
-
-                  <div className="w-16 h-16 rounded-full bg-[#1f2b6c] text-white flex items-center justify-center font-bold text-xl">
-
-                    {testimonials[active].image}
-
-                  </div>
-
-                  <div>
-
-                    <h4 className="font-semibold text-lg">
-                      {testimonials[active].name}
-                    </h4>
-
-                    <p className="text-gray-500">
-                      {testimonials[active].role}
-                    </p>
-
-                  </div>
-
-                </div>
-
-                {/* Controls */}
-
-                <div className="flex gap-3">
-
-                  <button
-                    onClick={prev}
-                    className="w-12 h-12 rounded-full bg-[#1f2b6c] text-white hover:bg-[#16204d] transition"
-                  >
-                    <ChevronLeft />
-                  </button>
-
-                  <button
-                    onClick={next}
-                    className="w-12 h-12 rounded-full bg-[#1f2b6c] text-white hover:bg-[#16204d] transition"
-                  >
-                    <ChevronRight />
-                  </button>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            {/* Indicators */}
-
-            <div className="flex justify-center gap-3 mt-10">
-
-              {testimonials.map((_, index) => (
-
-                <button
-                  key={index}
-                  onClick={() => setActive(index)}
-                  className={`transition-all rounded-full ${
-                    active === index
-                      ? "w-10 h-2 bg-[#1f2b6c]"
-                      : "w-2 h-2 bg-gray-300"
-                  }`}
-                />
-
-              ))}
-
-            </div>
-
+    <section className="bg-gray-50 py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-4 gap-8 items-start">
+          {/* Left Column - Header */}
+          <div className="lg:col-span-1 space-y-3">
+            <p className="text-[10px] md:text-xs font-bold text-[#003d7a] uppercase tracking-[0.25em]">
+              Testimonials
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+              What Patients Say
+            </h2>
           </div>
 
-        </div>
+          {/* Right Column - Testimonials Grid */}
+          <div className="lg:col-span-3">
+            <div className="grid md:grid-cols-3 gap-4 mb-6">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div className="flex gap-0.5 mb-2">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  
+                  <p className="text-gray-700 mb-4 leading-relaxed text-xs italic">
+                    "{testimonial.text}"
+                  </p>
+                  
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-full bg-[#003d7a] flex items-center justify-center text-white font-bold text-xs">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-xs">{testimonial.name}</p>
+                      <p className="text-[10px] text-gray-600">{testimonial.role}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
 
+            {/* Carousel Dots */}
+            <div className="flex justify-center lg:justify-start gap-2">
+              {[0, 1].map((dot) => (
+                <button
+                  key={dot}
+                  onClick={() => setActiveIndex(dot)}
+                  className={`w-1.5 h-1.5 rounded-full transition-all ${
+                    activeIndex === dot ? 'bg-[#003d7a] w-5' : 'bg-gray-300'
+                  }`}
+                  aria-label={`Go to testimonial set ${dot + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-  );
+  )
 }
