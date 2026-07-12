@@ -34,7 +34,7 @@ export default function CTASection() {
             </p>
             <Button
               variant="ghost"
-              className="w-fit bg-white text-[#003d7a] hover:bg-gray-100 px-6 py-2.5 text-sm rounded-md font-medium mx-auto"
+              className="w-fit bg-white text-[#003d7a] hover:bg-gray-300 px-6 py-2.5 text-sm rounded-md font-medium mx-auto"
               asChild
             >
               <Link href="#contact">
