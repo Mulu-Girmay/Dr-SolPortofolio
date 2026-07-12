@@ -4,9 +4,8 @@ import './globals.css'
 export const metadata = {
   title: 'Dr. Solomon | Family Medicine & General Practice',
   description: 'Achieve the best version of your health. Compassionate, comprehensive care from Dr. Solomon. Book your appointment today.',
-  generator: 'v0.app',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon.png',
     apple: '/apple-icon.png',
   },
 }
