@@ -1,51 +1,89 @@
-import { Users, Heart, Shield, BookOpen } from 'lucide-react'
+import {
+  Users,
+  HeartHandshake,
+  Award,
+  BriefcaseMedical,
+} from "lucide-react";
 
 const stats = [
   {
-    icon: <Users className="w-8 h-8 text-[#003d7a]" />,
-    number: '1,200+',
-    label: 'Successful Patients',
-    description: 'Patients cared for and continuously supported',
+    icon: Users,
+    number: "1,200+",
+    title: "Successful Cases",
+    text: "Patients treated with compassionate, high-quality medical care.",
   },
   {
-    icon: <Heart className="w-8 h-8 text-[#003d7a]" />,
-    number: '99%',
-    label: 'Patient Satisfaction',
-    description: 'Satisfaction rate from our patients',
+    icon: HeartHandshake,
+    number: "99%",
+    title: "Patient Satisfaction",
+    text: "Trusted by families through personalized healthcare.",
   },
   {
-    icon: <Shield className="w-8 h-8 text-[#003d7a]" />,
-    number: '99%',
-    label: 'Recovery Success Rate',
-    description: 'Positive outcomes through personalized care',
+    icon: Award,
+    number: "99%",
+    title: "Recovery Success",
+    text: "Evidence-based treatments delivering excellent outcomes.",
   },
   {
-    icon: <BookOpen className="w-8 h-8 text-[#003d7a]" />,
-    number: '500+',
-    label: 'Unwavering Dedication',
-    description: 'Hours of continuing education every year',
+    icon: BriefcaseMedical,
+    number: "500+",
+    title: "Medical Consultations",
+    text: "Providing professional care throughout every stage of life.",
   },
-]
+];
 
 export default function StatsSection() {
   return (
-    <section className="bg-white py-20 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center space-y-4">
-              <div className="flex justify-center text-primary">
-                {stat.icon}
-              </div>
-              <div>
-                <p className="text-4xl font-bold text-gray-900">{stat.number}</p>
-                <p className="text-lg font-semibold text-gray-900 mt-2">{stat.label}</p>
-              </div>
-              <p className="text-sm text-gray-600">{stat.description}</p>
-            </div>
-          ))}
+    <section className="bg-[#f5f6fa]">
+      <div className="max-w-7xl mx-auto px-4">
+
+        {/* White Card Continuation */}
+
+        <div className="bg-white border-x border-b border-gray-200">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4">
+
+            {stats.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={index}
+                  className={`p-10 ${
+                    index !== stats.length - 1
+                      ? "border-r border-gray-100"
+                      : ""
+                  }`}
+                >
+                  {/* Icon */}
+
+                  <Icon className="w-8 h-8 text-[#1f2b6c]" />
+
+                  {/* Number */}
+
+                  <h2 className="mt-6 text-4xl font-bold text-gray-900">
+                    {item.number}
+                  </h2>
+
+                  {/* Title */}
+
+                  <h3 className="mt-2 text-sm font-semibold tracking-wide text-gray-900 uppercase">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+
+                  <p className="mt-4 text-sm leading-7 text-gray-500">
+                    {item.text}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+
         </div>
+
       </div>
     </section>
-  )
+  );
 }

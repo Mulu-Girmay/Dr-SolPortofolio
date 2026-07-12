@@ -1,71 +1,153 @@
-import { Activity, Stethoscope, Heart, Users, Brain, Scale } from 'lucide-react'
+import {
+  Activity,
+  Heart,
+  Stethoscope,
+  Brain,
+  Users,
+  ArrowRight,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: <Activity className="w-8 h-8 text-[#003d7a]" />,
-    title: 'Chronic Disease Management',
-    description: 'Expert care for diabetes, hypertension, asthma, and other chronic conditions.',
+    icon: Activity,
+    title: "Chronic Disease",
+    description:
+      "Management of diabetes, hypertension, asthma and other long-term medical conditions.",
   },
   {
-    icon: <Stethoscope className="w-8 h-8 text-[#003d7a]" />,
-    title: 'Preventive Care',
-    description: 'Screenings, vaccinations, and personalized prevention strategies.',
+    icon: Stethoscope,
+    title: "General Checkups",
+    description:
+      "Routine examinations, diagnosis, vaccinations and preventive healthcare.",
   },
   {
-    icon: <Heart className="w-8 h-8 text-[#003d7a]" />,
+    icon: Heart,
     title: "Women's Health",
-    description: 'Comprehensive care including family planning, and women&apos;s wellness support.',
+    description:
+      "Comprehensive women's healthcare including wellness and family planning.",
   },
   {
-    icon: <Users className="w-8 h-8 text-[#003d7a]" />,
-    title: 'Pediatric Care',
-    description: 'Compassionate healthcare for infants, children, and adolescents.',
+    icon: Users,
+    title: "Family Medicine",
+    description:
+      "Healthcare services tailored for children, adults and senior patients.",
   },
   {
-    icon: <Brain className="w-8 h-8 text-[#003d7a]" />,
-    title: 'Mental Health',
-    description: 'Support for anxiety, depression, stress management, and overall well-being.',
+    icon: Brain,
+    title: "Mental Wellness",
+    description:
+      "Support for stress, anxiety, depression and emotional well-being.",
   },
   {
-    icon: <Scale className="w-8 h-8 text-[#003d7a]" />,
-    title: 'Weight Management',
-    description: 'Customized plans to help you achieve and maintain a healthy lifestyle.',
+    icon: Heart,
+    title: "Preventive Care",
+    description:
+      "Early screenings and personalized plans to help you stay healthy.",
   },
-]
+];
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="bg-gray-50 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16">
-          <p className="text-sm font-semibold text-[#003d7a] uppercase tracking-wide mb-4">
-            Services
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            What I Treat & Say About Dr. Harper
-          </h2>
-          <p className="text-lg text-gray-600">
-            I provide comprehensive primary care services to help you and your family stay healthy through every stage of life.
-          </p>
+    <section
+      id="services"
+      className="bg-[#f5f6fa] py-20"
+    >
+      <div className="max-w-7xl mx-auto px-4">
+
+        <div className="bg-white border border-gray-200">
+
+          <div className="px-10 lg:px-16 py-16">
+
+            {/* Heading */}
+
+            <div className="text-center max-w-3xl mx-auto">
+
+              <p className="uppercase tracking-[5px] text-xs font-semibold text-[#1f2b6c]">
+                SERVICES
+              </p>
+
+              <h2 className="mt-4 text-5xl font-bold text-gray-900">
+                Medical Services
+              </h2>
+
+              <div className="w-20 h-[2px] bg-[#1f2b6c] mx-auto mt-6"/>
+
+              <p className="mt-8 text-gray-600 leading-8">
+                Comprehensive healthcare designed to keep you and your family
+                healthy through every stage of life.
+              </p>
+
+            </div>
+
+            {/* Cards */}
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+
+              {services.map((service, index) => {
+                const Icon = service.icon;
+
+                return (
+
+                  <div
+                    key={index}
+                    className="group border border-gray-200 rounded-2xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 bg-white"
+                  >
+
+                    {/* Icon */}
+
+                    <div className="w-16 h-16 rounded-2xl bg-[#eef2ff] flex items-center justify-center group-hover:bg-[#1f2b6c] transition-colors">
+
+                      <Icon className="w-8 h-8 text-[#1f2b6c] group-hover:text-white transition-colors"/>
+
+                    </div>
+
+                    {/* Title */}
+
+                    <h3 className="mt-8 text-2xl font-semibold text-gray-900">
+                      {service.title}
+                    </h3>
+
+                    {/* Description */}
+
+                    <p className="mt-4 text-gray-600 leading-7">
+                      {service.description}
+                    </p>
+
+                    {/* Link */}
+
+                    <button className="mt-8 flex items-center gap-2 text-[#1f2b6c] font-semibold group-hover:gap-4 transition-all">
+
+                      Learn More
+
+                      <ArrowRight className="w-4 h-4"/>
+
+                    </button>
+
+                  </div>
+
+                );
+              })}
+
+            </div>
+
+            {/* Bottom CTA */}
+
+            <div className="mt-20 text-center">
+
+              <Button className="rounded-full bg-[#1f2b6c] hover:bg-[#16204d] px-8 h-11">
+
+                View All Services
+
+              </Button>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-primary mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
-              <div className="mt-4 flex justify-end">
-                <div className="text-[#003d7a] hover:opacity-70 cursor-pointer transition-opacity">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
-  )
+  );
 }

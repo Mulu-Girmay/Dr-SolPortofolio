@@ -1,46 +1,104 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+
+const navLinks = [
+  { title: "Home", href: "#home" },
+  { title: "About", href: "#about" },
+  { title: "Services", href: "#services" },
+  { title: "Contact", href: "#contact" },
+];
 
 export default function Header() {
-  return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-[#003d7a] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">+</span>
-            </div>
-            <span className="font-semibold text-gray-900">Dr. Montgomery</span>
-          </div>
+  const [open, setOpen] = useState(false);
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link href="#home" className="text-sm font-medium text-gray-700 hover:text-[#003d7a] transition-colors">
-              Home
-            </Link>
-            <Link href="#about" className="text-sm font-medium text-gray-700 hover:text-[#003d7a] transition-colors">
-              About
-            </Link>
-            <Link href="#services" className="text-sm font-medium text-gray-700 hover:text-[#003d7a] transition-colors">
-              Services
-            </Link>
-            <Link href="#patient-info" className="text-sm font-medium text-gray-700 hover:text-[#003d7a] transition-colors">
-              Patient Info
-            </Link>
-            <Link href="#contact" className="text-sm font-medium text-gray-700 hover:text-[#003d7a] transition-colors">
-              Contact
-            </Link>
+  return (
+    <header className="relative z-50 border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="h-20 flex items-center justify-between">
+          {/* Logo */}
+
+          <Link
+            href="/"
+            className="flex items-center gap-3 flex-shrink-0"
+          >
+            <div className="w-10 h-10 rounded-full bg-[#1f2b6c] flex items-center justify-center">
+              <span className="text-white font-semibold text-lg">+</span>
+            </div>
+
+            <div>
+              <h2 className="text-sm font-semibold tracking-wide text-gray-900">
+                Dr. Solomon
+              </h2>
+
+              <p className="text-[11px] text-gray-500 uppercase tracking-[3px]">
+                Family Doctor
+              </p>
+            </div>
+          </Link>
+
+          {/* Desktop Nav */}
+
+          <nav className="hidden md:flex items-center gap-10">
+            {navLinks.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="text-[13px] font-medium text-gray-600 hover:text-[#1f2b6c] transition-colors"
+              >
+                {item.title}
+              </Link>
+            ))}
           </nav>
 
-          {/* CTA Button */}
-          <Button>
-            Book Appointment
-          </Button>
+          {/* Appointment */}
+
+          <div className="hidden md:block">
+            <Button className="h-10 rounded-full px-7 bg-[#1f2b6c] hover:bg-[#16204d] text-sm font-medium">
+              Appointment
+            </Button>
+          </div>
+
+          {/* Mobile */}
+
+          <button
+            className="md:hidden"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+
+      {open && (
+        <div className="md:hidden border-t border-gray-100 bg-white">
+          <div className="px-8 py-5 space-y-4">
+            {navLinks.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="block text-sm text-gray-700"
+              >
+                {item.title}
+              </Link>
+            ))}
+
+            <Button className="w-full rounded-full bg-[#1f2b6c]">
+              Appointment
+            </Button>
+          </div>
+        </div>
+      )}
     </header>
-  )
+);
 }

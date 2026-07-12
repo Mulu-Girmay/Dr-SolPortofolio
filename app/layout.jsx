@@ -2,8 +2,8 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata = {
-  title: 'Dr. Montgomery | Family Medicine & General Practice',
-  description: 'Achieve the best version of your health. Compassionate, comprehensive care from Dr. Harper Montgomery. Book your appointment today.',
+  title: 'Dr. Solomon | Family Medicine & General Practice',
+  description: 'Achieve the best version of your health. Compassionate, comprehensive care from Dr. Solomon. Book your appointment today.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -34,8 +34,8 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className="antialiased bg-background text-foreground">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className="antialiased bg-background text-foreground" suppressHydrationWarning>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
