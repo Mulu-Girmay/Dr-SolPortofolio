@@ -13,23 +13,18 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="bg-[#f5f6fa] py-10"
+      className="bg-white py-12 md:py-16"
     >
-      <div className="max-w-7xl mx-auto px-4">
+      {/* Full Width Container */}
+      <div className="w-full px-0">
 
-        <div className="bg-white border border-gray-200">
+        <div className="bg-white">
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center p-10 lg:p-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-center px-6 lg:px-12 py-10 lg:py-16">
 
-            {/* LEFT IMAGE */}
+            {/* LEFT IMAGE - Closer to edge */}
 
-            <div className="relative">
-
-              {/* Background decoration */}
-
-              {/* <div className="absolute -top-8 -left-8 w-40 h-40 rounded-full bg-[#eef2ff]" /> */}
-
-              {/* <div className="absolute -bottom-8 -right-8 w-28 h-28 rounded-full bg-[#f7f7f7]" /> */}
+            <div className="relative pl-0">
 
               <div className="relative z-10 overflow-hidden rounded-xl shadow-xl">
 
@@ -43,11 +38,9 @@ export default function AboutSection() {
 
               {/* Floating Card */}
 
-              <div className="absolute bottom-8 -right-8 z-20 bg-white shadow-xl rounded-xl p-6 border border-gray-100">
+              <div className="absolute bottom-8 -right-1 z-20 bg-white shadow-xl rounded-xl p-4 border border-gray-100">
 
-                <Award className="w-8 h-8 text-[#1f2b6c]" />
-
-                <h3 className="mt-3 text-3xl font-bold text-gray-900">
+                <h3 className="mt-3 text-2xl font-bold text-gray-900">
                   10+
                 </h3>
 
@@ -61,7 +54,7 @@ export default function AboutSection() {
 
             {/* RIGHT */}
 
-            <div>
+            <div className="pr-0 lg:pr-8">
 
               <p className="uppercase tracking-[5px] text-xs font-semibold text-[#1f2b6c]">
                 ABOUT ME
@@ -166,8 +159,6 @@ export default function AboutSection() {
                 </div>
 
               </div>
-
-  
 
             </div>
 
