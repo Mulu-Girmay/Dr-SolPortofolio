@@ -38,11 +38,11 @@ export default function Header() {
             </div>
 
             <div>
-              <h2 className="text-sm font-semibold tracking-wide text-gray-900">
+              <h2 className="text-base font-semibold tracking-wide text-gray-900">
                 Dr. Solomon
               </h2>
 
-              <p className="text-[11px] text-gray-500 uppercase tracking-[3px]">
+              <p className="text-xs text-gray-500 uppercase tracking-[3px]">
                 Family Doctor
               </p>
             </div>
@@ -55,7 +55,7 @@ export default function Header() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="text-[13px] font-medium text-gray-600 hover:text-[#1f2b6c] transition-colors"
+                className="text-[20px] font-medium text-gray-600 hover:text-[#1f2b6c] transition-colors"
               >
                 {item.title}
               </Link>
@@ -65,7 +65,7 @@ export default function Header() {
           {/* Appointment */}
 
           <div className="hidden md:block">
-            <Button className="h-10 rounded-full px-7 bg-[#1f2b6c] hover:bg-[#16204d] text-sm font-medium">
+            <Button className="h-11 rounded-full px-7 bg-[#1f2b6c] hover:bg-[#16204d] text-sm font-medium">
              Book  Appointment
             </Button>
           </div>
