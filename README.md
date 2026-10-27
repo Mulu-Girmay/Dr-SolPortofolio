@@ -1,6 +1,6 @@
 # Dr. Sol Portfolio Website
 
-A modern, professional medical portfolio website for Dr. Harper Montgomery built with Next.js 16, React 19, and Tailwind CSS.
+A modern, professional medical portfolio website for Dr. Solomon Abrha built with Next.js 16, React 19, and Tailwind CSS.
 
 ![Portfolio Website](./assets/images/sol1.jpg)
 
